@@ -74,7 +74,7 @@ const About = () => {
           {/* Image Section */}
           <div
             ref={imageRef}
-            className="opacity-0 translate-x-8 transition-all duration-700 delay-300 animate-in:opacity-100 animate-in:translate-x-0"
+            className="opacity-0 lg:translate-x-8 transition-all duration-700 delay-300 animate-in:opacity-100 lg:animate-in:translate-x-0"
           >
             <div className="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-xl">
               <Image
