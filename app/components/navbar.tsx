@@ -143,25 +143,25 @@ export default function Navbar() {
                   Painting Services
                 </a>
                 < a
-                  href="#roofing"
+                  href="/services/roofing-services"
                   className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 first:rounded-t-lg transition-colors"
                   onClick={handleLinkClick}
                 >
                   Roofing Solutions
                 </a>
                 <a
-                  href="#construction"
+                  href="/services/carpentry-services"
                   className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors border-t border-gray-100"
                   onClick={handleLinkClick}
                 >
-                  Construction Materials
+                  Carpentry solutions
                 </a>
                 <a
-                  href="#consultation"
+                  href="/services/building-accessories-services"
                   className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 last:rounded-b-lg transition-colors border-t border-gray-100"
                   onClick={handleLinkClick}
                 >
-                  Design Consultation
+                  Building Accessories
                 </a>
               </div>
             </div>
@@ -269,25 +269,25 @@ export default function Navbar() {
                     Painting Services
                   </a>
                   <a
-                    href="#roofing"
+                    href="/services/roofing-services"
                     className="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors"
                     onClick={handleLinkClick}
                   >
                     Roofing Solutions
                   </a>
                   <a
-                    href="#construction"
+                    href="/services/carpentry-services"
                     className="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors"
                     onClick={handleLinkClick}
                   >
-                    Construction Materials
+                    Carpentry solutions
                   </a>
                   <a
-                    href="#consultation"
+                    href="/services/building-accessories-services"
                     className="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors"
                     onClick={handleLinkClick}
                   >
-                    Design Consultation
+                    Building Accessories
                   </a>
                 </div>
               </div>
