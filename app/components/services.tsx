@@ -20,31 +20,31 @@ const Services = () => {
       title: "Real Estate",
       subtitle:
         "We provide comprehensive real estate solutions, from property development to investment consulting, helping you make informed decisions in the property market",
-      image: "/hero6.jpg",
+      image: "/real-estate.webp",
     },
     {
       title: "Modern Roofing Materials",
       subtitle:
         "We supply and install Stone coated metal roofing tiles, Aluminium roofing sheets, and PVC rainwater system",
-      image: "/hero6.jpg",
+      image: "/roof (2).jpg",
     },
     {
       title: "High Quality Catena Paints & Painting Services",
       subtitle:
         "Our paints are produced according to our clients' taste to liven up your space, giving a neat & beautiful finish. Skilled painters are available to carry out all your paint works",
-      image: "/hero6.jpg",
+      image: "/paint.jpg",
     },
     {
       title: "Carpentry Services",
       subtitle:
         "We offer excellent carpentry services and supply high-quality wood that is termite-free and doesn't need to be preserved with chemicals",
-      image: "/hero6.jpg",
+      image: "/carpentry.jpg",
     },
     {
       title: "Building Accessories",
       subtitle:
         "We supply and install Aluminium casement windows, high quality doors, South African bricks, stainless steel handrails and Ornamental Wrought Iron components for a beautiful finish",
-      image: "/hero6.jpg",
+      image: "/building-accessories.webp",
     },
     {
       title: "Product Installation",
@@ -56,7 +56,7 @@ const Services = () => {
       title: "Maintenance Services",
       subtitle:
         "We repair and revamp old, faded, leaking and faulty roofing jobs. Our services are carried out by highly skilled and experienced professionals",
-      image: "/hero6.jpg",
+      image: "/maintenance.avif",
     },
   ]
 

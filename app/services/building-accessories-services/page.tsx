@@ -4,30 +4,12 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
-import { 
-  Paintbrush,
-  DollarSign,
-  Shield,
-  Leaf,
-  Sparkles,
-  Target,
-  Bug,
-  Sun,
-  Diamond,
-  Zap,
-  CheckCircle,
-  Users,
-  Gem,
-  Phone,
-  ShoppingCart,
-  ShieldCheck
-} from "lucide-react"
 
 export default function PaintingServices() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isAutoPlay, setIsAutoPlay] = useState(true)
 
-  const carouselImages = Array.from({ length: 7 }, (_, i) => ({
+  const carouselImages = Array.from({ length: 8 }, (_, i) => ({
     id: i + 1,
     src: `/paint (${i + 1}).jpg`,
     alt: `Catena Professional Painting Service ${i + 1}`,
@@ -35,52 +17,52 @@ export default function PaintingServices() {
 
   const benefits = [
     {
-      icon: Paintbrush,
+      icon: "🎨",
       title: "Ease of Application",
       description: "Smooth and effortless application process for professional results every time",
     },
     {
-      icon: DollarSign,
+      icon: "💰",
       title: "Cost Effective",
       description: "Premium quality at competitive prices without compromising on excellence",
     },
     {
-      icon: Shield,
+      icon: "🛡️",
       title: "Durable & Long Lasting",
       description: "Weather-resistant formula that maintains its beauty for years to come",
     },
     {
-      icon: Leaf,
+      icon: "🌿",
       title: "Eco-Friendly",
       description: "Safe for users and the environment with non-toxic formulation",
     },
     {
-      icon: Sparkles,
+      icon: "✨",
       title: "Superior Finish",
       description: "Forms thin film without cracking, ensuring a flawless appearance",
     },
     {
-      icon: Target,
+      icon: "🎯",
       title: "Excellent Coverage",
       description: "High-quality pigmentation provides great coverage with fewer coats",
     },
     {
-      icon: Bug,
+      icon: "🦠",
       title: "Anti-Fungi Protection",
       description: "Fortified formula prevents fungal growth for maximum protection",
     },
     {
-      icon: Sun,
+      icon: "🌈",
       title: "Fade Resistant",
       description: "Colors stay vibrant and fresh, resisting premature fading",
     },
     {
-      icon: Diamond,
+      icon: "💎",
       title: "Anti-Chalk Properties",
       description: "Maintains a smooth finish without producing dusty residue",
     },
     {
-      icon: Zap,
+      icon: "⚡",
       title: "Weather Resistant",
       description: "Performance unaffected by atmospheric conditions and climate changes",
     },
@@ -113,7 +95,7 @@ export default function PaintingServices() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative w-full min-h-[70vh] bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900 overflow-hidden">
+      <section className="relative w-full min-h-[70vh] bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -123,17 +105,17 @@ export default function PaintingServices() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-12">
             <div className="inline-block mb-6">
-              <span className="px-4 py-2 bg-slate-100 text-slate-700 rounded-full text-sm font-semibold tracking-wide uppercase">
+              {/* <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold tracking-wide uppercase">
                 Premium Paint Solutions
-              </span>
+              </span> */}
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Catena Customised Paints &<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-gray-200">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-cyan-200">
                 Professional Painting Services
               </span>
             </h1>
-            <p className="text-xl text-slate-100 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
               Transform your spaces with our high-quality, eco-friendly paints and expert painting services.
               Experience excellence in every brushstroke.
             </p>
@@ -249,24 +231,24 @@ export default function PaintingServices() {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl transform rotate-3"></div>
               <div className="relative bg-white rounded-2xl shadow-xl p-8 border-2 border-blue-100">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                  <ShieldCheck className="w-8 h-8 text-blue-600" />
+                  <span className="text-3xl">🎨</span>
                   Quality Assurance
                 </h3>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-2xl">✓</span>
                     <span className="text-gray-700">Strict quality control at every production stage</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-2xl">✓</span>
                     <span className="text-gray-700">Eco-friendly and safe formulation</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-2xl">✓</span>
                     <span className="text-gray-700">Superior coverage and thickness</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-2xl">✓</span>
                     <span className="text-gray-700">Professional-grade finish guaranteed</span>
                   </li>
                 </ul>
@@ -292,21 +274,16 @@ export default function PaintingServices() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-            {benefits.map((benefit, index) => {
-              const IconComponent = benefit.icon
-              return (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
-                >
-                  <div className="mb-4">
-                    <IconComponent className="w-10 h-10 text-blue-600" />
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
-                  <p className="text-sm text-gray-600">{benefit.description}</p>
-                </div>
-              )
-            })}
+            {benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+              >
+                <div className="text-4xl mb-4">{benefit.icon}</div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
+                <p className="text-sm text-gray-600">{benefit.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -331,27 +308,21 @@ export default function PaintingServices() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center">
-              <div className="flex justify-center mb-4">
-                <Users className="w-14 h-14 text-white" />
-              </div>
+              <div className="text-5xl mb-4">👨‍🎨</div>
               <h3 className="text-2xl font-bold text-white mb-3">Expert Painters</h3>
               <p className="text-blue-100">
                 Highly skilled professionals with years of experience in residential and commercial projects
               </p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center">
-              <div className="flex justify-center mb-4">
-                <Gem className="w-14 h-14 text-white" />
-              </div>
+              <div className="text-5xl mb-4">💎</div>
               <h3 className="text-2xl font-bold text-white mb-3">Quality Workmanship</h3>
               <p className="text-blue-100">
                 Meticulous attention to detail ensuring flawless results that exceed expectations
               </p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center">
-              <div className="flex justify-center mb-4">
-                <DollarSign className="w-14 h-14 text-white" />
-              </div>
+              <div className="text-5xl mb-4">💰</div>
               <h3 className="text-2xl font-bold text-white mb-3">Affordable Pricing</h3>
               <p className="text-blue-100">
                 Competitive rates without compromising on quality or service excellence
@@ -376,17 +347,15 @@ export default function PaintingServices() {
               href={process.env.NEXT_PUBLIC_STORE_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-2"
+              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              <ShoppingCart className="w-5 h-5" />
-              Shop Catena Paints
+              🛒 Shop Catena Paints
             </a>
             <a
               href="/contact"
-              className="px-8 py-4 bg-white border-2 border-blue-600 text-blue-600 font-semibold rounded-xl hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-2"
+              className="px-8 py-4 bg-white border-2 border-blue-600 text-blue-600 font-semibold rounded-xl hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              <Phone className="w-5 h-5" />
-              Request a Quote
+              📞 Request a Quote
             </a>
           </div>
         </div>

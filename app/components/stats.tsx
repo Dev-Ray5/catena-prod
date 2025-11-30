@@ -1,6 +1,8 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
+import { Building2, Users, Award, CheckCircle } from "lucide-react"
+import type { LucideIcon } from "lucide-react"
 
 type StatKey = "projects" | "clients" | "experience" | "quality"
 
@@ -9,7 +11,7 @@ interface StatItem {
   target: number
   suffix: string
   label: string
-  icon: string
+  icon: LucideIcon
 }
 
 export default function Stats() {
@@ -35,28 +37,28 @@ export default function Stats() {
       target: 1000,
       suffix: "+",
       label: "Completed Projects",
-      icon: "🏗️",
+      icon: Building2,
     },
     {
       key: "clients",
       target: 200,
       suffix: "+",
       label: "Happy Clients",
-      icon: "😊",
+      icon: Users,
     },
     {
       key: "experience",
       target: 15,
       suffix: " years",
       label: "Years Experience",
-      icon: "⭐",
+      icon: Award,
     },
     {
       key: "quality",
       target: 100,
       suffix: "%",
       label: "Quality Assurance",
-      icon: "✅",
+      icon: CheckCircle,
     },
   ]
 
@@ -167,47 +169,50 @@ export default function Stats() {
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {statsData.map((stat, index) => (
-            <div
-              key={stat.key}
-              className={`group bg-white rounded-2xl shadow-lg p-8 text-center transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 border border-gray-100 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-              }`}
-              style={{ transitionDelay: `${index * 0.15}s` }}
-            >
-              {/* Icon */}
-              <div className="mb-4 text-5xl transform group-hover:scale-110 transition-transform duration-300">
-                {stat.icon}
-              </div>
+          {statsData.map((stat, index) => {
+            const IconComponent = stat.icon
+            return (
+              <div
+                key={stat.key}
+                className={`group bg-white rounded-2xl shadow-lg p-8 text-center transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 border border-gray-100 ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+                }`}
+                style={{ transitionDelay: `${index * 0.15}s` }}
+              >
+                {/* Icon */}
+                <div className="mb-4 flex justify-center">
+                  <IconComponent className="w-12 h-12 text-blue-600 transform group-hover:scale-110 transition-transform duration-300" />
+                </div>
 
-              {/* Stat Number */}
-              <div className="mb-4">
-                <div className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                  {counts[stat.key as StatKey].toLocaleString()}
-                  <span className="text-3xl md:text-4xl ml-1">{stat.suffix}</span>
+                {/* Stat Number */}
+                <div className="mb-4">
+                  <div className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                    {counts[stat.key as StatKey].toLocaleString()}
+                    <span className="text-3xl md:text-4xl ml-1">{stat.suffix}</span>
+                  </div>
+                </div>
+
+                {/* Stat Label */}
+                <p className="text-gray-700 font-semibold text-base md:text-lg mb-6">{stat.label}</p>
+
+                {/* Progress Bar */}
+                <div className="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
+                  <div
+                    className="h-full bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 rounded-full shadow-sm"
+                    style={{
+                      width: `${progress[stat.key as StatKey]}%`,
+                      transition: "none",
+                    }}
+                  />
+                </div>
+
+                {/* Percentage indicator */}
+                <div className="mt-2 text-sm font-medium text-gray-500">
+                  {Math.round(progress[stat.key as StatKey])}%
                 </div>
               </div>
-
-              {/* Stat Label */}
-              <p className="text-gray-700 font-semibold text-base md:text-lg mb-6">{stat.label}</p>
-
-              {/* Progress Bar */}
-              <div className="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
-                <div
-                  className="h-full bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 rounded-full shadow-sm"
-                  style={{
-                    width: `${progress[stat.key as StatKey]}%`,
-                    transition: "none",
-                  }}
-                />
-              </div>
-
-              {/* Percentage indicator */}
-              <div className="mt-2 text-sm font-medium text-gray-500">
-                {Math.round(progress[stat.key as StatKey])}%
-              </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
         {/* Bottom CTA */}

@@ -78,7 +78,7 @@ const About = () => {
           >
             <div className="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/about.jpg"
+                src="/hero2.jpg"
                 alt="Catena Dynamic Resources - Paint Manufacturing and Construction Services"
                 fill
                 className="object-cover"

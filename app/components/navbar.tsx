@@ -136,6 +136,13 @@ export default function Navbar() {
                 }`}
               >
                 <a
+                  href="/services/painting-services"
+                  className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors border-t border-gray-100"
+                  onClick={handleLinkClick}
+                >
+                  Painting Services
+                </a>
+                < a
                   href="#roofing"
                   className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 first:rounded-t-lg transition-colors"
                   onClick={handleLinkClick}
@@ -148,13 +155,6 @@ export default function Navbar() {
                   onClick={handleLinkClick}
                 >
                   Construction Materials
-                </a>
-                <a
-                  href="/services/painting-services"
-                  className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors border-t border-gray-100"
-                  onClick={handleLinkClick}
-                >
-                  Painting Services
                 </a>
                 <a
                   href="#consultation"

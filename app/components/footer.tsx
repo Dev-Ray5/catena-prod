@@ -70,7 +70,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a 
-                  href="#store" 
+                  href={process.env.NEXT_PUBLIC_STORE_LINK}
                   className="text-sm hover:text-blue-500 transition-colors duration-300 inline-block hover:translate-x-1 transform"
                 >
                   Store
@@ -78,7 +78,7 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="#contact" 
+                  href="/contact" 
                   className="text-sm hover:text-blue-500 transition-colors duration-300 inline-block hover:translate-x-1 transform"
                 >
                   Contact Us
@@ -86,18 +86,10 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="#projects" 
+                  href="/projects" 
                   className="text-sm hover:text-blue-500 transition-colors duration-300 inline-block hover:translate-x-1 transform"
                 >
                   Projects
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="#services" 
-                  className="text-sm hover:text-blue-500 transition-colors duration-300 inline-block hover:translate-x-1 transform"
-                >
-                  Services
                 </a>
               </li>
               <li>
@@ -117,7 +109,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a 
-                  href="#terms" 
+                  href="/terms" 
                   className="text-sm hover:text-blue-500 transition-colors duration-300 inline-block hover:translate-x-1 transform"
                 >
                   Terms and Conditions
@@ -125,7 +117,7 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="#privacy" 
+                  href="/privacy" 
                   className="text-sm hover:text-blue-500 transition-colors duration-300 inline-block hover:translate-x-1 transform"
                 >
                   Privacy Policy
