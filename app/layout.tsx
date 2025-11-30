@@ -10,7 +10,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Catena Dynamic Resources - Construction & Painting",
   description: "Quality construction materials and painting services where quality meets affordability",
-  generator: "v0.app",
+  generator: "Drexx Codes",
   icons: {
     icon: [
       {

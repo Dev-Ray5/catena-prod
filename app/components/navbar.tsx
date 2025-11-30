@@ -150,7 +150,7 @@ export default function Navbar() {
                   Construction Materials
                 </a>
                 <a
-                  href="#painting"
+                  href="/services/painting-services"
                   className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors border-t border-gray-100"
                   onClick={handleLinkClick}
                 >
@@ -167,7 +167,17 @@ export default function Navbar() {
             </div>
 
             <a 
-              href="#projects" 
+              href="{process.env.NEXT_PUBLIC_STORE_LINK}" 
+              className={`transition-colors font-medium ${
+                scrolled 
+                  ? "text-gray-700 hover:text-blue-600" 
+                  : "text-white hover:text-blue-300"
+              }`}
+            >
+              Store
+            </a>
+            <a 
+              href="/projects" 
               className={`transition-colors font-medium ${
                 scrolled 
                   ? "text-gray-700 hover:text-blue-600" 
@@ -175,6 +185,16 @@ export default function Navbar() {
               }`}
             >
               Our Projects
+            </a>
+            <a 
+              href="/testimonials" 
+              className={`transition-colors font-medium ${
+                scrolled 
+                  ? "text-gray-700 hover:text-blue-600" 
+                  : "text-white hover:text-blue-300"
+              }`}
+            >
+              Testimonials
             </a>
             <a 
               href="/contact" 
@@ -242,6 +262,13 @@ export default function Navbar() {
               >
                 <div className="pl-4 space-y-1 py-1">
                   <a
+                    href="/services/painting-services"
+                    className="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors"
+                    onClick={handleLinkClick}
+                  >
+                    Painting Services
+                  </a>
+                  <a
                     href="#roofing"
                     className="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors"
                     onClick={handleLinkClick}
@@ -256,13 +283,6 @@ export default function Navbar() {
                     Construction Materials
                   </a>
                   <a
-                    href="#painting"
-                    className="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors"
-                    onClick={handleLinkClick}
-                  >
-                    Painting Services
-                  </a>
-                  <a
                     href="#consultation"
                     className="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors"
                     onClick={handleLinkClick}
@@ -273,11 +293,25 @@ export default function Navbar() {
               </div>
 
               <a
-                href="#projects"
+                href="{process.env.NEXT_PUBLIC_STORE_LINK}"
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors font-medium"
+                onClick={handleLinkClick}
+              >
+                Store
+              </a>
+              <a
+                href="/projects"
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors font-medium"
                 onClick={handleLinkClick}
               >
                 Our Projects
+              </a>
+              <a
+                href="/testimonials"
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors font-medium"
+                onClick={handleLinkClick}
+              >
+                Testimonials
               </a>
               <a
                 href="/contact"
